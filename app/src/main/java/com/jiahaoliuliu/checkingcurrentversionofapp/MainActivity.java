@@ -2,6 +2,7 @@ package com.jiahaoliuliu.checkingcurrentversionofapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,9 +12,15 @@ public class MainActivity extends AppCompatActivity {
     // version so the app will notify about update
     private static final String CURRENT_VERSION = "1.10";
 
+    // Views
+    private TextView mSimpleTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Link the views
+        mSimpleTextView = (TextView) findViewById(R.id.simple_text_view);
     }
 }
